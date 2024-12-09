@@ -1,0 +1,18 @@
+.student-list {
+    background-color: #f4f4f9;
+  }
+  
+  .student-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  .student-list .table th, .student-list .table td {
+    text-align: center;
+    height: 20px;
+  }
+  
+
+  

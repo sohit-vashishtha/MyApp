@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.navbar{
+  padding-left: 20px !important;
+}
+.navbar-nav {
+  width: 100%; /* Ensure the nav takes the full width */
+  justify-content: flex-end; /* Push the profile to the right */
+}
+
+.profile{
+  margin-left: auto; 
+  padding-right:100px ;
+  justify-content: flex-end;/* This ensures the profile item is pushed to the far right */
+}
+
+.App-link {
+  color: #61dafb;
+}/* Main container styles */
+.main-container {
+
+  transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+/* Apply left margin when the sidebar is open */
+.main-container.sidebar-open {
+  margin-left: 330px; /* Adjust this value based on your sidebar width */
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

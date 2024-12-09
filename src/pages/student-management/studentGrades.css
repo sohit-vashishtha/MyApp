@@ -1,0 +1,26 @@
+.student-grades {
+    padding: 20px;
+    background-color: #f4f4f9;
+  }
+  
+  .student-grades h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .student-grades .table th, .student-grades .table td {
+    text-align: center;
+  }
+  
+  .student-grades h4 {
+    margin-top: 30px;
+  }
+  
+  .student-grades .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .student-grades .btn {
+    margin-top: 10px;
+  }
+  

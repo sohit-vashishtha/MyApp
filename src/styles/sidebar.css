@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Sidebar.css */
+  .sidebar {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    padding-top: 20px;
+    color: white;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out, width 0.3s ease;
+    transform: translateX(-100%); /* Initially hidden */
+  }
+  
+  .sidebar .nav-link {
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+  }
+  
+  .sidebar .nav-link svg {
+    margin-right: 10px;
+  }
+  
+  .sidebar .nav-item {
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    /* When sidebar is closed on mobile, hide it */
+    .sidebar {
+        width: 250px;
+      transform: translateX(-100%); /* Move sidebar out of view */
+    }
+    .sidebar .nav-link{
+        width: 250px;
+    }
+    .sub-menu .nav-link {
+        width: 250px;
+    }
+    .sub-menu .nav-link:hover {
+        width: 250px;
+    }
+    .sub-menu {
+        width: 250px;
+    }
+    .sidebar.open {
+        width: 250px;
+      transform: translateX(0); /* When open, show sidebar */
+    }
+  
+    /* Show the hamburger menu button on small screens */
+    .sidebar-toggle-btn {
+      display: block;
+    }
+  
+    /* Adjust the content when sidebar is closed */
+    .main-container.sidebar-open {
+      margin-left: 0; /* No margin when sidebar is hidden */
+    }
+  
+    .main-container {
+      margin-left: 250px; /* Default width when sidebar is open */
+      transition: margin-left 0.3s ease;
+    }
+  }
+  
+  
+  .sidebar.open {
+    transform: translateX(0); /* When open, the sidebar is shown */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 20px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    color: #ddd;
+  }
+  
+  .sidebar-header {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sidebar-toggler {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #343a40;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it's above the sidebar */
+  }
+  
+  /* Hamburger Icon Styles */
+  .sidebar-toggler span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-toggler.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  
+  .sidebar-toggler.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .sidebar-toggler.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  
+  /* Main Container (Dashboard Area) Styles */
+  .main-container {
+    margin-left: 0; /* No margin initially, to occupy full width */
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  .main-container.sidebar-open {
+    margin-left: 300px; /* When sidebar is open, shift the main content */
+  }
+  
+  /* Header and Footer Styles */
+  header, footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    padding-left: 20px;
+  }
+ 
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .sidebar.open + .main-container .hamburger-icon {
+    margin-left: 200px; /* Adjust this value based on your sidebar width */
+  }
+  
+  /* Submenu styles */
+.sub-menu {
+    background-color: #495057;
+  }
+  
+  .sub-menu .nav-link {
+    width: 300px;
+   
+    color: #b8b8b8;
+  }
+  
+  .sub-menu .nav-link:hover {
+    background-color: #6c757d;
+  }
+  
+  .submenu-icon {
+    margin-left: auto;
+  }
+  /* Add media query for responsive layout */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Smaller sidebar width on mobile */
+    }
+  
+    .main-container.sidebar-open {
+      margin-left: 250px; /* Adjust dashboard size on mobile */
+    }
+  }
+  
